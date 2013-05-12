@@ -6,6 +6,9 @@
     <!--  Game Strings -->
     <string name="game">Game</string>
     
+    <!--  Cards Against Humanity Strings -->
+    <string name="cah">Cards Against Humanity</string>
+    
     <!--  Wifi Strings -->
     <string name="lock_button">Lock</string>
     <string name="open_button">Open</string>
