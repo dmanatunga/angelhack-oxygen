@@ -6,19 +6,38 @@
 
     <uses-sdk
         android:minSdkVersion="16"
-        android:targetSdkVersion="16" />
+        android:targetSdkVersion="17" />
 
+    <uses-feature />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity android:name="CoreActivity">
+        <activity android:name="CoreActivity" >
             <intent-filter>
-            	<action android:name="android.intent.action.MAIN" />
-            	<category android:name="android.intent.category.LAUNCHER" />
-        	</intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        
+        <service
+            android:name="com.angelhack.oxygen.service.ChordApiDemoService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.angelhack.oxygen.service.ChordApiDemoService.SERVICE_START" />
+                <action android:name="com.angelhack.oxygen.service.ChordApiDemoService.SERVICE_STOP" />
+                <action android:name="com.angelhack.oxygen.service.ChordApiDemoService.SERVICE_BIND" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

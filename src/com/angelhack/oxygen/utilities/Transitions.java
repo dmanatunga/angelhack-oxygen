@@ -16,7 +16,7 @@ import com.angelhack.oxygen.R;
 public class Transitions {
       private final static int GAME = R.string.game;
 
-	  private final static GameFragment gameFragment = new GameFragment();
+	  public final static GameFragment gameFragment = new GameFragment();
 
       private final static int HOME = GAME;
   
